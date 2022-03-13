@@ -1,0 +1,758 @@
+        -:    0:Source:F:/206_A3/main.cpp
+        -:    0:Graph:F:\206_A3\cmake-build-debug-coverage\CMakeFiles\206_A3.dir\main.cpp.gcno
+        -:    0:Data:F:\206_A3\cmake-build-debug-coverage\CMakeFiles\206_A3.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include <time.h>
+        -:    3:#include <string>
+        -:    4:#include <iostream>
+        -:    5:#include <algorithm>
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+        -:    9:const int MAX_SIZE = 10000000;
+        -:   10:
+        -:   11:// Set this to true if you wish the arrays to be printed.
+        -:   12:const bool OUTPUT_DATA = true;
+        -:   13:
+        -:   14:
+        -:   15:void ReadInput(string& sortAlg, int& size);
+        -:   16:
+        -:   17:void GenerateSortedData(int data[], int size);
+        -:   18:void GenerateNearlySortedData(int data[], int size);
+        -:   19:void GenerateReverselySortedData(int data[], int size);
+        -:   20:void GenerateRandomData(int data[], int size);
+        -:   21:
+        -:   22:void Sort(int data[], int size, string sortAlg, char* dataType);
+        -:   23:
+        -:   24:void InsertionSort(int data[], int size);
+        -:   25:void MergeSort(int data[], int lo, int hi);
+        -:   26:void QuickSort(int data[], int lo, int hi);
+        -:   27:void LibSort(int data[], int size);
+        -:   28:
+        -:   29:void Swap(int &x, int &y);
+        -:   30:
+        -:   31:bool IsSorted(int data[], int size);
+        -:   32:void printData(int data[], int size, string title);
+        -:   33:
+        -:   34:
+        -:   35:// Helper functions declarations
+        -:   36:void Merge(int data[], int lo, int q, int hi);
+        -:   37:
+function main called 1 returned 100% blocks executed 63%
+        1:   38:int main(void)
+        -:   39:{
+        -:   40:    int size;
+        1:   41:    string sortAlg;
+        1:   41-block  0
+call    0 returned 1
+    $$$$$:   41-block  1
+call    1 never executed
+        1:   42:    ReadInput(sortAlg, size);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   43:
+       1*:   44:    int * data = new int[size];
+        1:   44-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   44-block  1
+    %%%%%:   44-block  2
+call    2 never executed
+        1:   44-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45:    if( data == NULL)
+        1:   45-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        -:   46:    {
+    #####:   47:        cout << "\n Memory allocation error." << endl;
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   47-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   48:        exit(1);
+    %%%%%:   48-block  0
+call    0 never executed
+        -:   49:    }
+        -:   50:
+        1:   51:    GenerateSortedData(data, size);
+        1:   51-block  0
+call    0 returned 1
+        1:   52:    Sort(data, size, sortAlg,"Sorted Data");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   52-block  1
+call    6 returned 1
+    $$$$$:   52-block  2
+call    7 never executed
+    $$$$$:   52-block  3
+        -:   53:
+        1:   54:    GenerateNearlySortedData(data, size);
+call    0 returned 1
+        1:   55:    Sort(data, size, sortAlg,"Nearly Sorted Data");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  1
+call    6 returned 1
+    $$$$$:   55-block  2
+call    7 never executed
+    $$$$$:   55-block  3
+        -:   56:
+        1:   57:    GenerateReverselySortedData(data, size);
+call    0 returned 1
+        1:   58:    Sort(data, size, sortAlg,"Reversely Sorted Data");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   58-block  1
+call    6 returned 1
+    $$$$$:   58-block  2
+call    7 never executed
+    $$$$$:   58-block  3
+        -:   59:
+        1:   60:    GenerateRandomData(data, size);
+call    0 returned 1
+        1:   61:    Sort(data, size, sortAlg,"Random Data");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   61-block  1
+call    6 returned 1
+    $$$$$:   61-block  2
+call    7 never executed
+    $$$$$:   61-block  3
+        -:   62:
+        1:   63:    cout << "\nProgram Completed Successfully." << endl;;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   64:
+        1:   65:    delete [] data;
+        1:   65-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   65-block  1
+call    2 returned 1
+        -:   66:
+        1:   67:    return 0;
+        1:   67-block  0
+call    0 returned 1
+        -:   68:}
+        -:   69:/********************************************************************/
+        -:   70:
+        -:   71:
+        -:   72:
+        -:   73:
+function _Z9ReadInputRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERi called 1 returned 100% blocks executed 64%
+        1:   74:void ReadInput(string& sortAlg, int& size)
+        -:   75:{
+        1:   76:    cout << "  I:\tInsertion Sort" << endl;
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   77:    cout << "  M:\tMergeSort" << endl;
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   78:    cout << "  Q:\tQuickSort" << endl;
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   79:    cout << "  L:\tLibSort" << endl;
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   80:    cout << "Enter sorting algorithm: ";
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81:    cin >> sortAlg;
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   82:    string sortAlgName;
+        1:   82-block  0
+call    0 returned 1
+        1:   82-block  1
+call    1 returned 1
+    $$$$$:   82-block  2
+call    2 never executed
+        -:   83:
+        -:   84:
+        1:   85:    if(sortAlg == "I")
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:   86:        sortAlgName = "Insertion Sort";
+    %%%%%:   86-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        1:   87:    else if(sortAlg == "M")
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   88:        sortAlgName = "MergeSort";
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    #####:   89:    else if(sortAlg == "Q")
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   90:        sortAlgName = "QuickSort";
+    %%%%%:   90-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   91:    else if(sortAlg == "L")
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:        sortAlgName = "LibSort";
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   93:    else {
+    #####:   94:        cout << "\nUnrecognized sorting algorithm Code: " << sortAlg << endl;
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   94-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   94-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   95:        exit(1);
+    %%%%%:   95-block  0
+call    0 never executed
+        -:   96:    }
+        -:   97:
+        1:   98:    cout << "Enter input size: ";
+        1:   98-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   99:    cin >> size;
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  100:
+        1:  101:    cout << "\nSorting Algorithm: " << sortAlgName;
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  102:    cout << "\nInput Size = " << size << endl;
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  102-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  102-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  103:    cout << endl;
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  104:
+        1:  105:}
+        -:  106:/******************************************************************************/
+        -:  107:
+        -:  108:
+        -:  109:
+        -:  110:
+function _Z18GenerateSortedDataPii called 2 returned 100% blocks executed 100%
+        2:  111:void GenerateSortedData(int data[], int size)
+        -:  112:{
+        -:  113:    int i;
+        -:  114:
+        8:  115:    for(i=0; i<size; i++)
+        2:  115-block  0
+        8:  115-block  1
+branch  0 taken 6 (fallthrough)
+branch  1 taken 2
+        6:  116:        data[i] = i * 3 + 5;
+        6:  116-block  0
+        2:  117:}
+        -:  118:/*****************************************************************************/
+        -:  119:
+        -:  120:
+        -:  121:
+function _Z24GenerateNearlySortedDataPii called 1 returned 100% blocks executed 100%
+        1:  122:void GenerateNearlySortedData(int data[], int size)
+        -:  123:{
+        -:  124:    int i;
+        -:  125:
+        1:  126:    GenerateSortedData(data, size);
+        1:  126-block  0
+call    0 returned 1
+        -:  127:
+        4:  128:    for(i=0; i<size; i++)
+        4:  128-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        3:  128-block  1
+        3:  129:        if(i % 10 == 0)
+        3:  129-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:  130:            if(i+1 < size)
+        1:  130-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  131:                data[i] = data[i+1] + 7;
+        1:  131-block  0
+        1:  132:}
+        -:  133:/*****************************************************************************/
+        -:  134:
+        -:  135:
+        -:  136:
+function _Z27GenerateReverselySortedDataPii called 1 returned 100% blocks executed 100%
+        1:  137:void GenerateReverselySortedData(int data[], int size)
+        -:  138:{
+        -:  139:    int i;
+        -:  140:
+        4:  141:    for(i = 0; i < size; i++)
+        1:  141-block  0
+        4:  141-block  1
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        3:  142:        data[i] = (size-i) * 2 + 3;
+        3:  142-block  0
+        1:  143:}
+        -:  144:/*****************************************************************************/
+        -:  145:
+        -:  146:
+        -:  147:
+function _Z18GenerateRandomDataPii called 1 returned 100% blocks executed 100%
+        1:  148:void GenerateRandomData(int data[], int size)
+        -:  149:{
+        -:  150:    int i;
+        -:  151:
+        4:  152:    for(i = 0; i < size; i++)
+        1:  152-block  0
+        4:  152-block  1
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        3:  153:        data[i] = rand();
+        3:  153-block  0
+call    0 returned 3
+        1:  154:}
+        -:  155:/*****************************************************************************/
+        -:  156:
+        -:  157:
+function _Z4SortPiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPc called 4 returned 100% blocks executed 51%
+        4:  158:void Sort(int data[], int size, string sortAlg, char* dataType)
+        -:  159:{
+        -:  160:
+        4:  161:    cout << endl << dataType << ":";
+        4:  161-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        -:  162:
+        -:  163:
+        -:  164:    if (OUTPUT_DATA)
+        4:  165:        printData(data, size, "Data before sorting:");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  165-block  0
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:  165-block  1
+call    7 returned 4
+call    8 returned 4
+    $$$$$:  165-block  2
+call    9 never executed
+    $$$$$:  165-block  3
+    $$$$$:  165-block  4
+call   10 never executed
+    $$$$$:  165-block  5
+call   11 never executed
+        -:  166:
+        -:  167:
+        -:  168:
+        -:  169:    // Sorting is about to begin ... start the timer!
+        4:  170:    clock_t start = clock();
+call    0 returned 4
+        -:  171:
+        -:  172:
+        4:  173:    if(sortAlg == "I")
+call    0 returned 4
+branch  1 taken 0 (fallthrough)
+branch  2 taken 4
+    #####:  174:        InsertionSort(data, size);
+    %%%%%:  174-block  0
+call    0 never executed
+        4:  175:    else if(sortAlg == "M")
+        4:  175-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0
+        4:  176:        MergeSort(data, 0, size-1);
+        4:  176-block  0
+call    0 returned 4
+    #####:  177:    else if(sortAlg == "Q")
+    %%%%%:  177-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  178:        QuickSort(data, 0, size-1);
+    %%%%%:  178-block  0
+call    0 never executed
+    #####:  179:    else if(sortAlg == "L")
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  180:        LibSort(data, size);
+    %%%%%:  180-block  0
+call    0 never executed
+        -:  181:    else
+        -:  182:    {
+    #####:  183:        cout << "Invalid sorting algorithm!" << endl;
+    %%%%%:  183-block  0
+call    0 never executed
+call    1 never executed
+    #####:  184:        exit(1);
+call    0 never executed
+        -:  185:    }
+        -:  186:
+        -:  187:    // Sorting has finished ... stop the timer!
+        4:  188:    clock_t end = clock();
+        4:  188-block  0
+call    0 returned 4
+        4:  189:    double elapsed = (((double) (end - start)) / CLOCKS_PER_SEC) * 1000;
+        -:  190:
+        -:  191:
+        -:  192:
+        -:  193:    if (OUTPUT_DATA)
+        4:  194:        printData(data, size, "Data after sorting:");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  194-block  0
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:  194-block  1
+call    7 returned 4
+call    8 returned 4
+    $$$$$:  194-block  2
+call    9 never executed
+    $$$$$:  194-block  3
+    $$$$$:  194-block  4
+call   10 never executed
+        -:  195:
+        -:  196:
+        4:  197:    if (IsSorted(data, size))
+call    0 returned 4
+branch  1 taken 0 (fallthrough)
+branch  2 taken 4
+        -:  198:    {
+    #####:  199:        cout << "\nCorrectly sorted " << size << " elements in " << elapsed << "ms";
+    %%%%%:  199-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:  200:    }
+        -:  201:    else
+        4:  202:        cout << "ERROR!: INCORRECT SORTING!" << endl;
+        4:  202-block  0
+call    0 returned 4
+call    1 returned 4
+        4:  203:    cout << "\n-------------------------------------------------------------\n";
+        4:  203-block  0
+call    0 returned 4
+        4:  204:}
+        -:  205:/*****************************************************************************/
+        -:  206:
+        -:  207:
+        -:  208:
+        -:  209:
+function _Z8IsSortedPii called 4 returned 100% blocks executed 71%
+        4:  210:bool IsSorted(int data[], int size)
+        -:  211:{
+        -:  212:    int i;
+        -:  213:
+       4*:  214:    for(i=0; i<(size-1); i++)
+        4:  214-block  0
+        4:  214-block  1
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+    %%%%%:  214-block  2
+        -:  215:    {
+        4:  216:        if(data[i] > data[i+1])
+        4:  216-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:  217:            return false;
+        4:  217-block  0
+        -:  218:    }
+    #####:  219:    return true;
+    %%%%%:  219-block  0
+        -:  220:}
+        -:  221:/*****************************************************************************/
+        -:  222:
+        -:  223:
+        -:  224:
+        -:  225:
+function _Z13InsertionSortPii called 0 returned 0% blocks executed 0%
+    #####:  226:void InsertionSort(int data[], int size)
+        -:  227:{
+        -:  228:    //Write your code here
+    #####:  229:    int temp = 0, i, j=0;
+    #####:  230:    for (i = 0; i <= size - 1; i++){
+    %%%%%:  230-block  0
+    %%%%%:  230-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  231:        temp = data[i];
+    #####:  232:        for(j = i-1; j >= 0; j--){
+    %%%%%:  232-block  0
+    %%%%%:  232-block  1
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  232-block  2
+    #####:  233:            if(data[j] > temp){
+    %%%%%:  233-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  234:                data[j+1] = data[j];
+    %%%%%:  234-block  0
+        -:  235:            }
+        -:  236:            else{
+    #####:  237:                break;
+    %%%%%:  237-block  0
+        -:  238:            }
+        -:  239:        }
+    #####:  240:        data[j+1] = temp;
+    %%%%%:  240-block  0
+        -:  241:    }
+    #####:  242:}
+        -:  243:/*****************************************************************************/
+        -:  244:
+        -:  245:
+        -:  246:
+        -:  247:
+function _Z9MergeSortPiii called 20 returned 100% blocks executed 100%
+       20:  248:void MergeSort(int data[], int lo, int hi)
+        -:  249:{
+        -:  250:    //Write your code here
+        -:  251:    //You may create other functions if needed
+       20:  252:    if (lo == hi){
+       20:  252-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 8
+       12:  253:        return;
+       12:  253-block  0
+        -:  254:    }
+        8:  255:    int q = (lo + hi)/2;
+        8:  256:    MergeSort(data, lo, q);
+        8:  256-block  0
+call    0 returned 8
+        8:  257:    MergeSort(data, q + 1, hi);
+call    0 returned 8
+        8:  258:    Merge(data, lo, q, hi);
+call    0 returned 8
+        -:  259:}
+        -:  260:
+function _Z5MergePiiii called 8 returned 100% blocks executed 88%
+        8:  261:void Merge(int data[], int lo, int q, int hi){
+        8:  262:    auto const n1 = (q - lo)+1;
+        8:  263:    auto const n2 = hi - q;
+        -:  264:
+       8*:  265:    auto  *L = new int[n1], 		// Array index cannot be a variable
+        8:  265-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:  265-block  1
+    %%%%%:  265-block  2
+call    2 never executed
+        8:  265-block  3
+call    3 returned 8
+       8*:  266:    *R = new int[n2];         // Array index cannot be a variable
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:  266-block  0
+    %%%%%:  266-block  1
+call    2 never executed
+        8:  266-block  2
+call    3 returned 8
+        -:  267:
+        8:  268:    int large = max(L[n1 - 1], R[n2 - 1]);   // removed + 1
+call    0 returned 8
+        8:  269:    L[n1] = large;
+        8:  270:    L[n2] = large;
+        8:  271:    int i=0, j=0;
+        -:  272:
+       28:  273:    for(int k =lo; k<=hi; k++){
+       28:  273-block  0
+branch  0 taken 20 (fallthrough)
+branch  1 taken 8
+       20:  273-block  1
+       20:  274:        if (L[i] < R[j]){
+       20:  274-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 19
+        1:  275:            data[k] = L[i];
+        1:  276:            i++;
+        1:  276-block  0
+        -:  277:        }
+        -:  278:        else {
+       19:  279:            data[k] = R[j];
+       19:  280:            j++;
+       19:  280-block  0
+        -:  281:        }
+        -:  282:    }
+        8:  283:}
+        -:  284:/*****************************************************************************/
+        -:  285:
+        -:  286:
+        -:  287:
+        -:  288:
+function _Z9QuickSortPiii called 0 returned 0% blocks executed 0%
+    #####:  289:void QuickSort(int data[], int lo, int hi)
+        -:  290:{
+        -:  291:    //Write your code here
+        -:  292:    //You may create other functions if needed
+        -:  293:
+    #####:  294:}
+        -:  295:/*****************************************************************************/
+        -:  296:
+        -:  297:
+        -:  298:
+function _Z7LibSortPii called 0 returned 0% blocks executed 0%
+    #####:  299:void LibSort(int data[], int size)
+        -:  300:{
+    #####:  301:    sort(data, size + data);
+    %%%%%:  301-block  0
+call    0 never executed
+    #####:  302:}
+        -:  303:/*****************************************************************************/
+        -:  304:
+        -:  305:
+        -:  306:
+        -:  307:
+function _Z4SwapRiS_ called 0 returned 0% blocks executed 0%
+    #####:  308:void Swap(int &x, int &y)
+        -:  309:{
+    #####:  310:    int temp = x;
+    #####:  311:    x = y;
+    #####:  312:    y = temp;
+    #####:  313:}
+        -:  314:/*****************************************************************************/
+        -:  315:
+        -:  316:
+        -:  317:
+        -:  318:
+function _Z9printDataPiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 8 returned 100% blocks executed 83%
+        8:  319:void printData(int data[], int size, string title) {
+        -:  320:    int i;
+        -:  321:
+        8:  322:    cout << endl << title << endl;
+        8:  322-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+       32:  323:    for(i=0; i<size; i++)
+       32:  323-block  0
+branch  0 taken 24 (fallthrough)
+branch  1 taken 8
+       24:  323-block  1
+        -:  324:    {
+       24:  325:        cout << data[i] << " ";
+       24:  325-block  0
+call    0 returned 24
+call    1 returned 24
+      24*:  326:        if(i%10 == 9 && size > 10)
+branch  0 taken 0 (fallthrough)
+branch  1 taken 24
+    %%%%%:  326-block  0
+branch  2 never executed
+branch  3 never executed
+    #####:  327:            cout << endl;
+    %%%%%:  327-block  0
+call    0 never executed
+        -:  328:    }
+        8:  329:}
