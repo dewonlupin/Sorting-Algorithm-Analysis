@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "206_A3.exe"
   "206_A3.exe.manifest"
   "206_A3.pdb"
-  "CMakeFiles/206_A3.dir/main.cpp.obj"
+  "CMakeFiles/206_A3.dir/sort.cpp.obj"
   "lib206_A3.dll.a"
 )
 

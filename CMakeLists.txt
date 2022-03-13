@@ -3,4 +3,4 @@ project(206_A3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(206_A3 main.cpp)
+add_executable(206_A3 sort.cpp)

@@ -65,27 +65,27 @@ include CMakeFiles/206_A3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/206_A3.dir/flags.make
 
-CMakeFiles/206_A3.dir/main.cpp.obj: CMakeFiles/206_A3.dir/flags.make
-CMakeFiles/206_A3.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\206_A3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/206_A3.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\206_A3.dir\main.cpp.obj -c F:\206_A3\main.cpp
+CMakeFiles/206_A3.dir/sort.cpp.obj: CMakeFiles/206_A3.dir/flags.make
+CMakeFiles/206_A3.dir/sort.cpp.obj: ../sort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\206_A3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/206_A3.dir/sort.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\206_A3.dir\sort.cpp.obj -c F:\206_A3\sort.cpp
 
-CMakeFiles/206_A3.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/206_A3.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\206_A3\main.cpp > CMakeFiles\206_A3.dir\main.cpp.i
+CMakeFiles/206_A3.dir/sort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/206_A3.dir/sort.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\206_A3\sort.cpp > CMakeFiles\206_A3.dir\sort.cpp.i
 
-CMakeFiles/206_A3.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/206_A3.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\206_A3\main.cpp -o CMakeFiles\206_A3.dir\main.cpp.s
+CMakeFiles/206_A3.dir/sort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/206_A3.dir/sort.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\206_A3\sort.cpp -o CMakeFiles\206_A3.dir\sort.cpp.s
 
 # Object files for target 206_A3
 206_A3_OBJECTS = \
-"CMakeFiles/206_A3.dir/main.cpp.obj"
+"CMakeFiles/206_A3.dir/sort.cpp.obj"
 
 # External object files for target 206_A3
 206_A3_EXTERNAL_OBJECTS =
 
-206_A3.exe: CMakeFiles/206_A3.dir/main.cpp.obj
+206_A3.exe: CMakeFiles/206_A3.dir/sort.cpp.obj
 206_A3.exe: CMakeFiles/206_A3.dir/build.make
 206_A3.exe: CMakeFiles/206_A3.dir/linklibs.rsp
 206_A3.exe: CMakeFiles/206_A3.dir/objects1.rsp

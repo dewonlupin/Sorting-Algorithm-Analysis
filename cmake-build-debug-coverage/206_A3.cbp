@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/206_A3/main.cpp">
+		<Unit filename="F:/206_A3/sort.cpp">
 			<Option target="206_A3"/>
 		</Unit>
 		<Unit filename="F:/206_A3/CMakeLists.txt">
